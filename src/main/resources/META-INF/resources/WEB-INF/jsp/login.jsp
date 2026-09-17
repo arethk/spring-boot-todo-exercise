@@ -1,8 +1,8 @@
 <html>
 	<head>
-		<title>My first HTML Page - Login</title>
+		<title>Login Page</title>
 	</head>
 	<body>
-		Login
+		Welcome ${name}
 	</body>
 </html>
