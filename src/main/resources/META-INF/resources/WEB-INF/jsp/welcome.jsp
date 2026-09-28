@@ -3,6 +3,7 @@
 		<title>Welcome Page</title>
 	</head>
 	<body>
-		Welcome ${name}!
+		<div>Welcome ${name}!</div>
+		<div><a href="list-todos">Manage Todos</a></div>
 	</body>
 </html>
