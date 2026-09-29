@@ -2,6 +2,7 @@ package com.areth.springboot.todowebapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 //Database (MySQL) 
@@ -47,7 +48,7 @@ public class Todo {
 	}
 
 	public void setDescription(String description) {
-		this.description = description;
+		this.description = description.trim();
 	}
 
 	public LocalDate getTargetDate() {
