@@ -12,14 +12,17 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
 @SessionAttributes("name")
-public class LoginController {
+//public class LoginController {
+public class WelcomeController {
 	
+	/*
 	private AuthenticationService authService;
 	
 	public LoginController(AuthenticationService authService) {
 		super();
 		this.authService = authService;
 	}
+	*/
 
 	/*  // first example
 	private Logger logger = LoggerFactory.getLogger(getClass());
@@ -32,12 +35,14 @@ public class LoginController {
 	}
 	*/
 	
-	@RequestMapping(value = "login", method = RequestMethod.GET)
-	public String goToLoginPage() {
-		return "login";
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String goToWelcomePage(ModelMap map) {
+		map.put("name", "Name");
+		return "welcome";
 	}
 	
-	@RequestMapping(value = "login", method = RequestMethod.POST)
+	/*
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String goToWelcomePage(@RequestParam String name, @RequestParam String password, ModelMap map) {
 		if (authService.authenticate(name, password) == true) {
 			map.put("name", name);
@@ -46,4 +51,5 @@ public class LoginController {
 		map.put("errorMessage", "Invalid Login");
 		return "login";			
 	}
+	*/
 }
